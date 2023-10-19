@@ -1,0 +1,55 @@
+@startuml
+
+' Интерфейсы
+interface ContactWriter {
+~ void writeContact(String, String, String) : метод записи контакта в хранилище
+}
+
+interface ContactReader {
+~ void readContacts(String) : метод чтения контактов из хранилища
+}
+
+' Классы и операции
+
+'' Класс, представляющий запись в телефонной книге.
+class Contact {
+- String name : имя контакта
+- String phone : номер телефона контакта
+- String email : адрес электронной почты контакта
+}
+
+'' Класс, представляющий запись в формате CSV.
+class CSVContact {
+- String csvFile : путь к файлу CSV
++ void writeContact(String, String, String) : метод записи контакта в файл CSV
++ void readContacts(String) : метод чтения контактов из файла CSV
+}
+
+'' Класс, представляющий главную функцию приложения.
+class Main {
++ {static} void main(String[]) : главный метод приложения
+}
+
+ContactWriter <|.. CSVContact
+ContactReader <|.. CSVContact
+
+@enduml
+
+/*
+- Интерфейсы ContactWriter и ContactReader определяют
+общие методы для классов, которые будут работать с записями
+телефонной книги. В данном случае это методы записи и
+чтения контактов.
+
+- Класс Contact представляет собой запись в телефонной книге и
+содержит поля для имени, номера телефона и адреса электронной
+почты контакта.
+
+- Класс CSVContact представляет запись в формате CSV и содержит
+методы для записи и чтения контактов из файла CSV. Он реализует
+интерфейсы ContactWriter и ContactReader.
+
+- Класс Main содержит главный метод приложения, который запускает
+ программу.
+
+ */
