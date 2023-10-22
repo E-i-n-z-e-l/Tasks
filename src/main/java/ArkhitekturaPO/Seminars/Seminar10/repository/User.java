@@ -1,5 +1,8 @@
 package ArkhitekturaPO.Seminars.Seminar10.repository;
 
+/**
+ Класс User представляет собой модель пользователя, которая содержит два поля: id и name.
+ */
 public class User {
     private int id;
 
