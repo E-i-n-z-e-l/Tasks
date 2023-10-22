@@ -1,5 +1,6 @@
 package ArkhitekturaPO.Practocal.Practical10;
 
+// Создаем сущность Product
 public class Product {
     private int id;
     private String name;

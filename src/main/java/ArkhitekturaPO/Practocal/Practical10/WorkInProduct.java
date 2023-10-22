@@ -4,7 +4,7 @@ import ArkhitekturaPO.Seminars.Seminar10.dao.User;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// Базовые методы для работы с Product
 public class WorkInProduct implements InterfaceProduct{
     private List<Product> products = new ArrayList<>();
     private int nextId = 1;

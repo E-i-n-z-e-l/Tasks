@@ -5,6 +5,9 @@ import java.util.List;
 
 public class UnitOfWork {
     private InterfaceProduct productRepository;
+
+    // В этом классе мы создали коллекции addedProducts, updatedProducts и deletedProducts для хранения продуктов,
+    // которые будут добавлены, обновлены или удалены в рамках транзакции.
     private List<Product> addedProducts;
     private List<Product> updatedProducts;
     private List<Product> deletedProducts;
@@ -20,7 +23,8 @@ public class UnitOfWork {
         updatedProducts.clear();
         deletedProducts.clear();
     }
-
+    // Мы также добавили методы addProduct, updateProduct и deleteProduct для добавления продуктов в
+    // соответствующие коллекции.
     public void addProduct(Product product) {
         addedProducts.add(product);
     }
@@ -32,7 +36,8 @@ public class UnitOfWork {
     public void deleteProduct(Product product) {
         deletedProducts.add(product);
     }
-
+    // Метод commit выполняет сохранение изменений в базу данных. Он перебирает все продукты из соответствующих
+    // коллекций и вызывает соответствующие методы репозитория (add, save и delete).
     public void commit() {
         for (Product product : addedProducts) {
             productRepository.add(product);

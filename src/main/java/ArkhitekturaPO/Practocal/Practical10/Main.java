@@ -4,6 +4,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        // В этом коде мы создаем экземпляр ProductService, а затем получаем UnitOfWork. Затем создаем несколько
+        // продуктов и добавляем их с помощью метода addProduct UnitOfWork.
         ProductService productService = new ProductService();
         UnitOfWork unitOfWork = productService.getUnitOfWork();
 
