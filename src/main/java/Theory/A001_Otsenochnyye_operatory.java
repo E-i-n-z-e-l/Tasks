@@ -2,7 +2,7 @@ package Theory;
 /*
 Оценочные операторы "&& - и", "|| - или", "! - не"
 */
-public class Otsenochnyye_operatory_1 {
+public class A001_Otsenochnyye_operatory {
     public static void main(String[] args) {
 
         boolean yes = true;
