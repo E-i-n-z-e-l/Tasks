@@ -3,7 +3,7 @@ package Theory;
 /**
  Константы математических операций - число Pi и возведение в степень.
  */
-public class MathematicalCalculations12 {
+public class A012_MathematicalCalculations {
     public static void main(String[] args) {
         float radius = Float.parseFloat("2");
         float shortPi = (float) Math.PI;
