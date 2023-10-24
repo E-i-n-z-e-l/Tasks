@@ -7,7 +7,7 @@ package Theory;
 не зависимо верно оно или нет.
 */
 
-public class Tsikly_5 {
+public class A005_Tsikly {
     public static void main(String[] args) {
 
         int num = 100;
