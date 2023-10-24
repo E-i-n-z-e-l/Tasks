@@ -3,7 +3,7 @@ import java.util.Scanner;
 /*
                                     Ветвление с помощью переключателей
  */
-public class switch_and_case_4 {
+public class A004_switch_and_case {
     public static void main(String[] args) {
 
 		/*
