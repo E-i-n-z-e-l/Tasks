@@ -9,7 +9,7 @@ package Theory;
 
  * В блоке finally пишем код, который будет выполняться в любом случае независимо от ошибок.
  */
-public class TryCatch11 {
+public class A011_TryCatch {
     public static void main(String[] args) {
         try
         {
