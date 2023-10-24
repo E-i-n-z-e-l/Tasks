@@ -2,7 +2,7 @@ package Theory;
 /*
                                     Условные операторы
 */
-public class Uslovnyye_operatory_2 {
+public class A002_Uslovnyye_operatory {
 
     /*
 	"?" - если
