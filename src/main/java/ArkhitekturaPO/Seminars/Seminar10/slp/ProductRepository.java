@@ -3,7 +3,10 @@ package ArkhitekturaPO.Seminars.Seminar10.slp;
 import java.util.ArrayList;
 import java.util.List;
 
-// Пример репозитория для работы с продуктами
+/**
+ Класс ProductRepository представляет собой репозиторий продуктов, который содержит список всех продуктов
+ (products) и имеет методы для добавления нового продукта (addProduct) и получения всех продуктов (getAllProducts).
+ */
 public class ProductRepository {
     private List<Product> products = new ArrayList<>();
 

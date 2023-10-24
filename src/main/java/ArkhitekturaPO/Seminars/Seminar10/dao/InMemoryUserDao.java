@@ -3,6 +3,10 @@ package ArkhitekturaPO.Seminars.Seminar10.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ Класс InMemoryUserDao реализует интерфейс UserDao и представляет собой DAO для пользователей, который хранит
+ список всех пользователей (users) в памяти и имеет реализации методов интерфейса UserDao для работы с этим списком.
+ */
 public class InMemoryUserDao implements UserDao {
     private List<User> users = new ArrayList<>();
     private int nextId = 1;

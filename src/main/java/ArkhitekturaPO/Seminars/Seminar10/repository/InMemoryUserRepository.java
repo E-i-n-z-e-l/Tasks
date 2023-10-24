@@ -3,6 +3,11 @@ package ArkhitekturaPO.Seminars.Seminar10.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ Класс InMemoryUserRepository представляет собой репозиторий пользователей, который содержит список всех
+ пользователей (users) и имеет методы для получения пользователя по id (getById), получения всех пользователей
+ (getAll), добавления нового пользователя (add), обновления пользователя (update) и удаления пользователя (delete).
+ */
 public class InMemoryUserRepository implements Repository<User> {
     private List<User> users = new ArrayList<>();
     private int nextId = 1;

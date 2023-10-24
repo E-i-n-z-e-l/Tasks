@@ -3,7 +3,9 @@ package ArkhitekturaPO.Seminars.Seminar10.slp;
 import java.util.ArrayList;
 import java.util.List;
 
-// Пример сущности
+/**
+ Класс Product представляет собой модель продукта, которая содержит два поля: id и name.
+ */
 public class Product {
     private int id;
     private String name;
