@@ -2,7 +2,7 @@ package Theory;
 /*
 Преобразование типов
  */
-public class Preobrazovaniye_tipov_6 {
+public class A006_Preobrazovaniye_tipov {
     public static void main(String[] args) {
 
         float daysFloat = 365.25f; // Создаем переменную типа float(дробь).
