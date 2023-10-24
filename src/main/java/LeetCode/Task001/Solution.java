@@ -21,4 +21,5 @@ package LeetCode.Task001;
  */
 
 public class Solution {
+
 }
