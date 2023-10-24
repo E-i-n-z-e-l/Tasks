@@ -2,7 +2,7 @@ package Theory;
 /*
 Создание массивов переменных
  */
-public class Sozdaniye_massivov_7 {
+public class A007_Sozdaniye_massivov {
     public static void main(String[] args) {
         String[] str = {"Java ", "Хороший", " Язык"}; // Создаем строчный массив.
         str[1] = "Лучший"; // Меняем второй элемент массива.
