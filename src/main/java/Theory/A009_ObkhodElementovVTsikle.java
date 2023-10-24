@@ -1,6 +1,6 @@
 package Theory;
-
-public class ObkhodElementovVTsikle_9 {
+// Вывод элементов в цикле
+public class A009_ObkhodElementovVTsikle {
     public static void main(String[] args) {
         String[] htm = { "HTML5", "in", "easy", "steps" } ;
         int j = 0 ;
