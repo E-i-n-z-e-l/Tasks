@@ -2,7 +2,7 @@ package Theory;
 /*
 Передача аргументов
  */
-public class Peredacha_argumentov_8 {
+public class A008_Peredacha_argumentov {
     // String[] args сам по себе уже является массивом строк без данных.
     public static void main(String[] args) {
 
