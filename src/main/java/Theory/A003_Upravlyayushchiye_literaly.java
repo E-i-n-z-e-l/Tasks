@@ -14,7 +14,7 @@ package Theory;
 	\' 			        Одиночная кавычка (апостроф)
 	\" 			        Двойная кавычка
  */
-public class Upravlyayushchiye_literaly_3 {
+public class A003_Upravlyayushchiye_literaly {
     public static void main(String[] args) {
 
         String header = "\n\tНЬЮ-ЙОРК ПРОГНОЗ НА 3 ДНЯ:\n";
