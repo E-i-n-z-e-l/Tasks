@@ -1,4 +1,4 @@
-package Theory;
+package Theory.Basics;
 
 /**
  Константы математических операций - число Pi и возведение в степень.

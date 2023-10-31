@@ -1,4 +1,4 @@
-package Theory;
+package Theory.Basics;
 /*
 Оценочные операторы "&& - и", "|| - или", "! - не"
 */

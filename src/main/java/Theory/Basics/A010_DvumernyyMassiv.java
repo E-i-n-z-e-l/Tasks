@@ -1,4 +1,4 @@
-package Theory;
+package Theory.Basics;
 
 /**
  Создание двумерного массива - матрицы.

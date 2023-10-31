@@ -1,4 +1,4 @@
-package Theory;
+package Theory.Basics;
 // Вывод элементов в цикле
 public class A009_ObkhodElementovVTsikle {
     public static void main(String[] args) {

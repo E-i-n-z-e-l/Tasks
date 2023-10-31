@@ -1,4 +1,4 @@
-package Theory;
+package Theory.Basics;
 
 /**
  Управление строками. Складывание строк.

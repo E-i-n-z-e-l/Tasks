@@ -1,4 +1,4 @@
-package Theory;
+package Theory.Basics;
 /*
                                 «Побитовые» операторы в языке Java
 

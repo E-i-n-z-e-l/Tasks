@@ -1,4 +1,4 @@
-package Theory;
+package Theory.Basics;
 /*
                                         Управляющие литералы
 

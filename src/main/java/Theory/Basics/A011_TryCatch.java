@@ -1,4 +1,4 @@
-package Theory;
+package Theory.Basics;
 
 /**
  * Перехват исключений - try-catch.
