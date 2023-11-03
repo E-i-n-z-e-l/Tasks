@@ -15,7 +15,7 @@ class SuperClass {
         System.out.println("Привет из Суперкласса");
     }
 
-    public static void echo(String arg) {
+    public static void echo(String arg) { // (echo просто название метода, не путай)
         try {
             System.out.println("Вы ввели: " + arg);
         } catch (Exception e) {
