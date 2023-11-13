@@ -8,10 +8,10 @@ import java.io.File;
  */
 public class RabotaSFaylami {
     public static void main(String[] args) {
-        File dir = new File( "data" ) ;
+        File dir = new File("data");
         if (dir.exists()) { // Проверяем существует ли файл.
             String[] files = dir.list(); // Эта строка создает массив строк, содержащий имена файлов и
-                                        // подкаталогов в каталоге, представленном объектом "dir".
+            // подкаталогов в каталоге, представленном объектом "dir".
             System.out.println(files.length + " файлов найдено...");
             for (int i = 0; i < files.length; i++) {
                 System.out.println(files[i]);
