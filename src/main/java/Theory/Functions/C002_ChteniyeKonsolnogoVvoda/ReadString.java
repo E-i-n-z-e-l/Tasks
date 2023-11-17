@@ -1,4 +1,4 @@
-package Theory.Functions.С002_ChteniyeKonsolnogoVvoda;
+package Theory.Functions.C002_ChteniyeKonsolnogoVvoda;
 
 import java.io.*;
 
