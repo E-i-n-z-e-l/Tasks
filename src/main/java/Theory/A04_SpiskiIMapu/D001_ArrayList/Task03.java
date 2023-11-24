@@ -3,7 +3,7 @@ package Theory.A04_SpiskiIMapu.D001_ArrayList;
 import java.util.ArrayList;
 
 /**
- * Создайте ArrayList объектов класса Person (с полями name и age) и напишите программу, которая найдет
+ * Задача №3. Создайте ArrayList объектов класса Person (с полями name и age) и напишите программу, которая найдет
  * самого старшего человека в списке.
  */
 public class Task03 {
