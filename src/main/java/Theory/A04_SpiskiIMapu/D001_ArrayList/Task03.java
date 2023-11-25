@@ -8,8 +8,8 @@ import java.util.ArrayList;
  */
 public class Task03 {
     public static class Human {
-        private String name;
-        private int age;
+        private final String name;
+        private final int age;
 
         public Human(String name, int age) {
             this.name = name;
