@@ -25,27 +25,24 @@ public class Task05 {
 
         list1.addAll(list2);
         Collections.sort(list1);
-//        int y = list2.get(0);
-//        for (int x: list1) {
-//            if (x != y) {
-//                list1.add(list2.get(0));
-//            }
-//        }
+
 
         for (int x: list1) {
             System.out.println(x);
         }
 
-        // Самый эфективный способ через HashSet.
+        // Самый эфективный способ через HashSet (убирает все дубликаты из списка).
         HashSet<Integer> set = new HashSet<>(list1);
         System.out.println(set);
 
         // Делаем через вложенный цикл.
         for (int i = 0; i < list1.size(); i++) {
-            for (int j = i + 1; j < list1.size(); j++) {
-                if (list1.get(i).equals(list1.get(j))) {
-                    list1.remove(j);
-                    j--;
+            for (int j = i + 1; j < list1.size(); j++) { // j = i + 1 потому что нужно проверять каждое следующее
+                                                        // число в списке с первым в списке.
+                if (list1.get(i).equals(list1.get(j))) { // Метод equals() сравнивает между собой значения.
+                    list1.remove(j); // Удаление дубликата.
+                    j--; // Смещаемся влево чтобы не пропустить все числа в списке. Так как при использовании
+                        // метода remove() - удаление из списка, часть значений из списка может сместиться влево.
                 }
             }
         }
