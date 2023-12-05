@@ -9,7 +9,7 @@ import java.util.HashMap;
  */
 public class Task02 {
     public static void main(String[] args) {
-        String word = "параллелограмм ";
+        String word = "параллелограмм";
         System.out.println(countingLetters(word));
     }
     public static HashMap<Integer, String> countingLetters (String word) {
@@ -18,3 +18,6 @@ public class Task02 {
         return countingLetters;
     }
 }
+
+
+// ! Переделай строку в массив символов, а массив символов в массив строк(в каждой строке одна буква).
