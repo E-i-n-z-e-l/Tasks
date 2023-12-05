@@ -1,0 +1,120 @@
+                                                TreeMap
+TreeMap — это реализация интерфейса SortedMap. Основным отличием TreeMap от HashMap является то, что TreeMap
+гарантирует упорядоченность элементов по ключу. Внутри TreeMap используется красно-черное дерево для хранения
+пар ключ-значение.
+
+Особенности TreeMap:
+
+- Гарантирует упорядоченное хранение элементов по ключу.
+- Предоставляет дополнительные методы для работы с диапазонами ключей, такими как subMap(), headMap(), tailMap().
+- Сложность времени выполнения основных операций (добавление, удаление, поиск элементов) составляет O(log n).
+
+Пример использования TreeMap:
+
+import java.util.TreeMap;
+import java.util.Map;
+
+public class TreeMapExample {
+    public static void main(String[] args) {
+        Map<String, Integer> treeMap = new TreeMap<>();
+
+        treeMap.put("One", 1);
+        treeMap.put("Two", 2);
+        treeMap.put("Three", 3);
+    }
+}
+
+Основные методы TreeMap:
+
+### 1. put(K key, V value)
+Добавляет указанное значение value с ключом key в TreeMap. Если ключ уже существует, значение будет заменено.
+
+### 2. get(Object key)
+Возвращает значение, связанное с указанным ключом, или null, если ключ не найден.
+
+### 3. containsKey(Object key)
+Проверяет наличие указанного ключа в TreeMap. Возвращает true, если ключ присутствует, и false в противном случае.
+
+### 4. remove(Object key)
+Удаляет элемент с указанным ключом из TreeMap.
+
+### 5. firstKey()
+Возвращает первый (наименьший) ключ в TreeMap.
+
+### 6. lastKey()
+Возвращает последний (наибольший) ключ в TreeMap.
+
+### 7. ceilingKey(K key)
+Возвращает наименьший ключ, который больше или равен указанному ключу, или null, если нет ключа.
+
+### 8. floorKey(K key)
+Возвращает наибольший ключ, который меньше или равен указанному ключу, или null, если нет ключа.
+
+### 9. subMap(K fromKey, K toKey)
+Возвращает представление части TreeMap, ключи которой находятся в пределах указанного диапазона.
+
+### 10. headMap(K toKey)
+Возвращает представление части TreeMap, ключи которой меньше указанного значения toKey.
+
+### 11. tailMap(K fromKey)
+Возвращает представление части TreeMap, ключи которой больше или равны указанному значению fromKey.
+______________________________________________________________________________________________________________
+
+Пример использования основных методов TreeMap:
+
+import java.util.TreeMap;
+import java.util.Map;
+
+public class TreeMapExample {
+    public static void main(String[] args) {
+        Map<String, Integer> treeMap = new TreeMap<>();
+
+        treeMap.put("One", 1);
+        treeMap.put("Two", 2);
+        treeMap.put("Three", 3);
+
+        System.out.println(treeMap.get("Three")); // Выведет: 3
+        System.out.println(treeMap.containsKey("Two")); // Выведет: true
+
+        treeMap.remove("One");
+        System.out.println(treeMap.containsKey("One")); // Выведет: false
+
+        System.out.println(treeMap.firstKey()); // Выведет: Three
+        System.out.println(treeMap.lastKey()); // Выведет: Two
+    }
+}
+
+
+Они обеспечивают упорядоченное хранение и расширенные функциональности по сравнению с обычной HashMap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
