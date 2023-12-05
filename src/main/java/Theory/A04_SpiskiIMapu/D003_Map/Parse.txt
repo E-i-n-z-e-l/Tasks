@@ -1,0 +1,40 @@
+В Java для разбора (парсинга) строки в различные типы данных существуют различные методы в разных классах.
+Вот некоторые из них:
+
+  1. Integer.parseInt(String s) - для парсинга строки в целочисленное значение. Пример:
+
+     ```java
+     String number = "123";
+     int parsedNumber = Integer.parseInt(number);
+     ```
+
+  2. Double.parseDouble(String s) - для парсинга строки в значение с плавающей точкой (double). Пример:
+
+     ```java
+     String decimalNumber = "3.14";
+     double parsedDecimalNumber = Double.parseDouble(decimalNumber);
+     ```
+
+  3. Boolean.parseBoolean(String s) - для парсинга строки в логическое значение (boolean). Пример:
+
+     ```java
+     String boolString = "true"; // или "false"
+     boolean parsedBoolean = Boolean.parseBoolean(boolString);
+     ```
+
+  4. LocalDate.parse(CharSequence text) - для парсинга строки в объект LocalDate (дата) с использованием класса
+  java.time.LocalDate в Java 8 и выше. Пример:
+
+     ```java
+     String dateText = "2023-12-05";
+     LocalDate parsedDate = LocalDate.parse(dateText);
+     ```
+
+  5. DateTimeFormatter.parse(CharSequence text) - для более гибкого парсинга и форматирования даты и времени
+  с использованием класса java.time.format.DateTimeFormatter в Java 8 и выше. Пример:
+
+     ```java
+     String dateTimeText = "2023-12-05T12:00:00";
+     DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+     LocalDateTime parsedDateTime = LocalDateTime.parse(dateTimeText, formatter);
+     ```
