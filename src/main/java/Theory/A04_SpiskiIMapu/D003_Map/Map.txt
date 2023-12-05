@@ -136,7 +136,7 @@ public class MapEntryExample {
 
 
 Дополнительная статья - https://habr.com/ru/articles/128017/
-
+Дополнительная статья - https://javarush.com/groups/posts/2542-otvetih-na-samihe-populjarnihe-voprosih-ob-interfeyse-map
 
 
 
