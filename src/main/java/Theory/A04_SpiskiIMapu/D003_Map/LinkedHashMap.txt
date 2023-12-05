@@ -1,0 +1,95 @@
+                                            LinkedHashMap
+
+LinkedHashMap представляет собой расширение HashMap с сохранением порядка вставки элементов. Он использует связанный
+список для хранения порядка вставки элементов.
+LinkedHashMap также представляет собой реализацию интерфейса Map в Java, но с дополнительным свойством - сохранение
+порядка вставки элементов. Это означает, что порядок, в котором элементы были добавлены в карту, сохраняется при
+итерации по ней или при вызове ключевых методов.
+
+Особенности LinkedHashMap:
+
+- Сохраняет порядок вставки элементов.
+- Реализует все основные методы HashMap с дополнительной характеристикой порядка вставки.
+- Сложность времени выполнения основных операций (добавление, удаление, поиск элементов) также составляет O(1),
+  равно как и у HashMap.
+
+Основные методы LinkedHashMap:
+
+### 1. put(K key, V value)
+Добавляет указанное значение value с ключом key в LinkedHashMap. Если ключ уже существует, значение будет заменено.
+
+### 2. get(Object key)
+Возвращает значение, связанное с указанным ключом, или null, если ключ не найден.
+
+### 3. containsKey(Object key)
+Проверяет наличие указанного ключа в LinkedHashMap. Возвращает true, если ключ присутствует, и false в противном случае.
+
+### 4. remove(Object key)
+Удаляет элемент с указанным ключом из LinkedHashMap.
+
+### 5. clear()
+Удаляет все ключи и значения из LinkedHashMap.
+
+Пример использования основных методов LinkedHashMap:
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class LinkedHashMapExample {
+    public static void main(String[] args) {
+        Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+
+        linkedHashMap.put("One", 1);
+        linkedHashMap.put("Two", 2);
+        linkedHashMap.put("Three", 3);
+
+        System.out.println(linkedHashMap.get("Two")); // Выведет: 2
+        System.out.println(linkedHashMap.containsKey("Three")); // Выведет: true
+
+        linkedHashMap.remove("One");
+        System.out.println(linkedHashMap.containsKey("One")); // Выведет: false
+
+        linkedHashMap.clear();
+        System.out.println(linkedHashMap.isEmpty()); // Выведет: true
+    }
+}
+
+
+LinkedHashMap сохраняет порядок вставки элементов, поэтому при добавлении элементов порядок их обхода будет
+совпадать с порядком их вставки.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
