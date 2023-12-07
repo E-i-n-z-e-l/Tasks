@@ -1,4 +1,4 @@
-package Theory.A04_SpiskiIMapu.D003_Map;
+package Theory.A04_SpiskiIMapu.D003_Map.HashMap;
 
 import java.util.ArrayList;
 import java.util.Arrays;
