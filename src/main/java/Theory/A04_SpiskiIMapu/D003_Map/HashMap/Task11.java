@@ -39,13 +39,12 @@ public class Task11 {
      * @param list
      * @return
      */
-    public static ArrayList<String> sortedWordinList(ArrayList<String> list) {
+    public static void sortedWordinList(ArrayList<String> list) {
         for (int i = 0; i < list.size(); i++) {
             String sortedWord = sortedWord(list.get(i));
             list.set(i, sortedWord);
         }
         System.out.println(list);
-        return list;
     }
 
     /**
@@ -62,7 +61,7 @@ public class Task11 {
             }
         }
         for (Map.Entry<String, Integer> entry : mapAnagramm.entrySet()) {
-            System.out.println(entry.getKey() + "=" + entry.getValue());
+            System.out.println(entry.getKey() + " = " + entry.getValue());
         }
     }
 }
