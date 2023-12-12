@@ -96,9 +96,72 @@ System.out.println(str);
 Это лишь несколько из множества способов прохода по StringBuilder в Java. Каждый из этих способов имеет свои
 особенности и может быть использован в зависимости от конкретной задачи.
 
+________________________________________________________________________________________________________________
+Получение последнего символа или последних нескольких символов из StringBuilder можно выполнить несколькими способами.
+Вот несколько из них:
+
+### 1. Использование метода charAt()
+StringBuilder sb = new StringBuilder("Hello, World!");
+
+// Получение последнего символа
+char lastChar = sb.charAt(sb.length() - 1);
+System.out.println("Последний символ: " + lastChar);
+// Результат: Последний символ: !
+
+// Для получения нескольких последних символов:
+int count = 3;
+StringBuilder lastChars = new StringBuilder();
+for (int i = Math.max(0, sb.length() - count); i < sb.length(); i++) {
+    lastChars.append(sb.charAt(i));
+}
+System.out.println("Последние " + count + " символа: " + lastChars.toString());
+// Результат: Последние 3 символа: d!
 
 
+### 2. Использование метода substring()
+StringBuilder sb = new StringBuilder("Hello, World!");
 
+// Получение последнего символа
+String lastChar = sb.substring(sb.length() - 1);
+System.out.println("Последний символ: " + lastChar);
+// Результат: Последний символ: !
+
+// Для получения нескольких последних символов:
+int count = 3;
+String lastChars = sb.substring(Math.max(0, sb.length() - count));
+System.out.println("Последние " + count + " символа: " + lastChars);
+// Результат: Последние 3 символа: ld!
+
+_________________________________________________________________________________________________________________
+Метод substring() в Java используется для извлечения подстроки из строки или объекта StringBuilder.
+Он позволяет получить часть исходной строки, начиная с определенного индекса и до определенного индекса
+(включительно либо исключительно).
+
+### Синтаксис метода substring():
+
+String substring(int beginIndex)
+String substring(int beginIndex, int endIndex)
+
+- beginIndex: Индекс символа, с которого начинается подстрока. Для StringBuilder индексация начинается с 0.
+- endIndex: Индекс символа, до которого будет идти подстрока. Символ с индексом endIndex не включается в подстроку. Если endIndex не указан, подстрока будет включать все символы с beginIndex до конца строки.
+
+### Пример использования метода substring():
+StringBuilder sb = new StringBuilder("Hello, World!");
+
+String sub1 = sb.substring(7);
+System.out.println(sub1);
+// Вывод: "World!"
+
+String sub2 = sb.substring(0, 5);
+System.out.println(sub2);
+// Вывод: "Hello"
+
+В первом примере sb.substring(7) получает подстроку, начиная с индекса 7 (включительно) и до конца строки.
+Во втором примере sb.substring(0, 5) возвращает подстроку, начиная с индекса 0 (включительно) и до индекса 5
+(исключительно).
+
+Метод substring() может быть полезен для множества задач, таких как извлечение части строки для дальнейшей
+обработки, обрезание строки и т.д.
 
 
 
