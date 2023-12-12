@@ -216,6 +216,45 @@ System.out.println(sb.toString());
 В этом примере метод setCharAt() устанавливает символ в индексе 1 равным 'Z', заменяя "b" на "Z".
 Как видите, replace() и setCharAt() предоставляют удобные способы замены содержимого в объекте StringBuilder.
 
+_________________________________________________________________________________________________________________
+
+Метод compareTo() в StringBuilder сравнивает содержимое двух объектов StringBuilder.
+Он возвращает отрицательное целое число, ноль или положительное целое число, если вызывающий объект (перед точкой)
+меньше, равен или больше объекта, переданного в аргументе соответственно.
+
+### Синтаксис метода compareTo() в StringBuilder:
+public int compareTo(StringBuilder another)
+
+### Пример использования метода compareTo():
+
+StringBuilder sb1 = new StringBuilder("abc");
+StringBuilder sb2 = new StringBuilder("def");
+
+int result1 = sb1.compareTo(sb2);
+System.out.println(result1);  // Вывод: отрицательное число (меньше)
+
+StringBuilder sb3 = new StringBuilder("abc");
+StringBuilder sb4 = new StringBuilder("abc");
+
+int result2 = sb3.compareTo(sb4);
+System.out.println(result2);  // Вывод: 0 (равно)
+
+StringBuilder sb5 = new StringBuilder("xyz");
+StringBuilder sb6 = new StringBuilder("abc");
+
+int result3 = sb5.compareTo(sb6);
+System.out.println(result3);  // Вывод: положительное число (больше)
+
+В этом примере compareTo() сравнивает содержимое StringBuilder. result1 отрицательный, так как "abc" (sb1) меньше
+чем "def" (sb2). result2 равен 0, так как "abc" (sb3) равно "abc" (sb4). И result3 положительный, так как "xyz" (sb5)
+больше чем "abc" (sb6).
+
+Когда вызывается метод compareTo(), он сравнивает символы в StringBuilder по их последовательному расположению.
+Если он находит различие, он возвращает разницу в числовой форме (в соответствии с лексикографическим порядком
+кодовых точек) между первыми парой отличающихся символов. Если содержимое одинаковое, он возвращает 0.
+
+Этот метод полезен при сравнении содержимого StringBuilder для целей сортировки или определения их относительного
+порядка.
 
 
 
