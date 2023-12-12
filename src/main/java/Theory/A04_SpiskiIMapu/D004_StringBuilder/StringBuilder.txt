@@ -44,7 +44,57 @@ public class StringBuilderExample {
 Так что, вот как StringBuilder облегчает манипуляции со строками, позволяя изменять их содержимое без создания
 большого количества временных объектов строк.
 
+--------------------------------------------------------------------------------------------------------------------
+В Java существует несколько способов прохода по объекту StringBuilder помимо использования цикла
+с индексацией (цикл for). Давай рассмотрим их:
 
+### 1. Цикл for-each с использованием метода codePoints()
+В Java 9 появился метод codePoints(), который позволяет проходить по символам в строке или StringBuilder без
+необходимости преобразования строки в массив символов. Это особенно полезно, когда имеются символы Unicode или
+суррогатные пары.
+
+StringBuilder sb = new StringBuilder("Привет, мир!");
+
+sb.codePoints().forEach(codePoint -> System.out.print(Character.toChars(codePoint)));
+// Результат: Привет, мир!
+
+
+### 2. Цикл for со счетчиком и метод length()
+Также можно использовать стандартный цикл for, но с методом codePointAt(), который позволяет читать символы
+в кодировке UTF-16:
+
+StringBuilder sb = new StringBuilder("Hello, 世界!");
+
+for (int i = 0; i < sb.length(); ) {
+    int code = sb.codePointAt(i);
+    i += Character.charCount(code);
+    System.out.print(Character.toChars(code));
+}
+// Результат: Hello, 世界!
+
+
+### 3. Использование метода chars()
+Java 8 предоставляет метод chars(), который возвращает поток IntStream, содержащий значения кодовых точек символов
+в строке или StringBuilder:
+
+StringBuilder sb = new StringBuilder("Java StringBuilder");
+
+sb.chars().forEach(codePoint -> System.out.print(Character.toChars(codePoint)));
+// Результат: Java StringBuilder
+
+
+### 4. Метод toString()
+Наконец, если необходимо модифицировать StringBuilder и преобразовать его обратно в строку для дальнейшей обработки,
+можно использовать метод toString():
+
+StringBuilder sb = new StringBuilder("Java StringBuilder");
+
+String str = sb.toString();
+System.out.println(str);
+// Результат: Java StringBuilder
+
+Это лишь несколько из множества способов прохода по StringBuilder в Java. Каждый из этих способов имеет свои
+особенности и может быть использован в зависимости от конкретной задачи.
 
 
 
