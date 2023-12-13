@@ -12,7 +12,7 @@ public class Task09 {
 
     public static void parseSB(StringBuilder sb) {
         String s = sb.toString();
-        String[] words = s.split("\\s+");
+        String[] words = s.split("\\s+"); //            \\s+ - ищет вхождения пробелов в строке.
 
         for (String word : words) {
             System.out.println(word);
