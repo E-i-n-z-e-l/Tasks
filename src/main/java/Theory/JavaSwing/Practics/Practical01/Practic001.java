@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Practic001 extends JFrame {
     JButton btnStart = new JButton("Сервер запущен");
@@ -11,6 +13,7 @@ public class Practic001 extends JFrame {
     JTextArea logTextArea = new JTextArea(); // Создаем поле лога в котором выводится текст;
     JPanel mainPanel = new JPanel(new CardLayout()); // Создаем панель, на которой будут размещаться компоненты;
     private boolean isServerWorking;
+    List<User> users = new ArrayList<>(); // Создаем список пользователей чата;
     public Practic001() {
         super("Practic001"); // Название окошка;
 
@@ -24,6 +27,7 @@ public class Practic001 extends JFrame {
         isServerWorking = false;
         logTextArea.setEditable(false); // Запрещаем писать в поле лога;
 
+
         // Создаем слушателя событий для кнопки btnStart:
         btnStart.addActionListener(new ActionListener() {
             @Override
@@ -34,7 +38,7 @@ public class Practic001 extends JFrame {
                     isServerWorking = true;
                     logTextArea.append("Сервер запущен\n");
                 }
-
+                notifyUsers();
             }
         });
 
@@ -62,5 +66,28 @@ public class Practic001 extends JFrame {
         getContentPane().add(logPanel, BorderLayout.CENTER); // Добавляем панель с полем лога в центр окна;
 
         setVisible(true); // Делаем окошко видимым;
+    }
+    public void addMessageToLog(String message) {
+        logTextArea.append(message);
+    }
+
+    // Метод для проверки состояния сервера:
+    public boolean isServerRunning() {
+        return isServerWorking;
+    }
+    // Метод для уведомления всех пользователей о состоянии сервера
+    public void notifyUsers() {
+        String message;
+        if (isServerWorking) {
+            message = "Вы успешно подключились к серверу\n";
+        } else {
+            message = "Не удалось подключиться к серверу\n";
+        }
+        for (User user : users) {
+            user.addMessageToLog(message);
+        }
+    }
+    public void addUser(User user) {
+        users.add(user);
     }
 }

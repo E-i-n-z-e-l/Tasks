@@ -11,12 +11,19 @@ public class User extends JFrame {
     JTextField inputTextField = new JTextField();
     JTextField inputNameUser = new JTextField("Username");
     JPanel mainPanel = new JPanel(new CardLayout()); // Создаем панель, на которой будут размещаться компоненты;
-    public User () {
+    private Practic001 server;
+    public User (Practic001 server) {
         super("User"); // Название окошка;
+
+        this.server = server;
+        server.addUser(this);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE); // Закрывая окошко, закрываешь программу;
         setSize(400, 600); // Размеры окошка;
         setLocation(1400, 200); // Расположение окна на экране;
         logTextArea.setEditable(false); // Запрещаем писать в поле лога;
+
+
 
         mainPanel.setLayout(new BorderLayout());
         // Добавляем поле ввода и кнопку на основную панель:
@@ -32,7 +39,7 @@ public class User extends JFrame {
                 String name = inputNameUser.getText();
                 // Добавляем новое сообщение в лог:
                 logTextArea.append(name + ": " + message + "\n");
-
+                server.addMessageToLog(name + ": " + message + "\n");
                 // Очищаем JTextField после отправки сообщения:
                 inputTextField.setText("");
                 }
@@ -46,8 +53,12 @@ public class User extends JFrame {
 
         setVisible(true); // Делаем окошко видимым;
     }
-
-    public static void main(String[] args) {
-        new User();
+    public void addMessageToLog(String message) {
+        if (server.isServerRunning()) {
+            logTextArea.append(message);
+        } else {
+            logTextArea.append("Не удалось отправить сообщение. Сервер не запущен\n");
+        }
     }
+
 }
