@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +31,6 @@ public class Practic001 extends JFrame {
         isServerWorking = false;
         logTextArea.setEditable(false); // Запрещаем писать в поле лога;
 
-
         // Создаем слушателя событий для кнопки btnStart:
         btnStart.addActionListener(new ActionListener() {
             @Override
@@ -37,10 +40,12 @@ public class Practic001 extends JFrame {
                 } else {
                     isServerWorking = true;
                     logTextArea.append("Сервер запущен\n");
+                    restoreLogFromFile("log.txt");
                 }
                 notifyUsers();
             }
         });
+
 
         // Создаем слушателя событий для кнопки btnNotPress:
         btnNotPress.addActionListener(new ActionListener() {
@@ -89,5 +94,23 @@ public class Practic001 extends JFrame {
     }
     public void addUser(User user) {
         users.add(user);
+    }
+    public void saveLogToFile(String filename) {
+        try (FileWriter writer = new FileWriter(filename)) {
+            writer.write(logTextArea.getText());
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void restoreLogFromFile(String filename) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                logTextArea.append(line + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
