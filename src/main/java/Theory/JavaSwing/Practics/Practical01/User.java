@@ -42,10 +42,10 @@ public class User extends JFrame {
                 if (server.isServerRunning()) {
                     server.addMessageToLog(name + ": " + message + "\n");
                     logTextArea.append(name + ": " + message + "\n");
-                    server.saveLogToFile("log.txt");
                 } else {
                     logTextArea.append("Не удалось отправить сообщение. Сервер не запущен\n");
                 }
+                server.saveLogToFile("log.txt");
                 // Очищаем JTextField после отправки сообщения:
                 inputTextField.setText("");
                 }
