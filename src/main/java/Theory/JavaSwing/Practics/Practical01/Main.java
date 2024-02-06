@@ -7,6 +7,5 @@ public class Main {
         Practic001 server = new Practic001();
         new User(server);
         new User(server);
-
     }
 }
