@@ -1,7 +1,7 @@
 package Theory.A05_PostroyeniyeInterfeysov.F001_ProstoyPrimer;
 
 public class EmployPay implements InterfaceEmploy {
-    private String name;
+    private final String name;
     private double salary;
     public EmployPay(String name, double salary) {
         this.name = name;
