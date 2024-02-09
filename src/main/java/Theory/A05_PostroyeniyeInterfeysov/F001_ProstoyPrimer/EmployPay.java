@@ -20,7 +20,7 @@ public class EmployPay implements InterfaceEmploy {
 
     @Override
     public void raiseSalary(double byPercent) {
-        double raise = salary * byPercent / 100;
+        double raise = this.salary * byPercent / 100;
         salary += raise;
     }
     @Override
