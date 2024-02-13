@@ -32,7 +32,7 @@ public class OgranicheniyUP<T extends Number> {
  * Double и т.д., ограничение T extends Number позволяет использовать эти числовые типы и их подтипы в качестве
  * аргумента типа T для класса Box.
  */
-class Main {
+class MainUp {
     public static void main(String[] args) {
         OgranicheniyUP<Integer> intBox = new OgranicheniyUP<>(5);
         System.out.println("Square: " + intBox.square()); // Output: Square: 25.0
