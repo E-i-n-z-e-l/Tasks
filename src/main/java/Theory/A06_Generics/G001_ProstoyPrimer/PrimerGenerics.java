@@ -19,5 +19,8 @@ public class PrimerGenerics {
         stringBox.setValue("Hello"); // Устанавливаем его значение на "Hellow";
         String message = stringBox.getValue(); // Получаем значение;
         System.out.println(message);
+
+        KeyAndValue<Integer, String> keyAndValue = new KeyAndValue<>(1, "One");
+        System.out.println(keyAndValue);
     }
 }
