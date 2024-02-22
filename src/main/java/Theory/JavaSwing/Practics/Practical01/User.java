@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 public class User extends JFrame {
     JButton btnSend = new JButton("Отправить сообщение");
     JTextArea logTextArea = new JTextArea(); // Создаем поле лога в котором выводится текст;
+
     JTextField inputTextField = new JTextField();
     JTextField inputNameUser = new JTextField("Username");
     JPanel mainPanel = new JPanel(new CardLayout()); // Создаем панель, на которой будут размещаться компоненты;
@@ -37,9 +38,14 @@ public class User extends JFrame {
                 // Получаем текст из JTextField inputTextField:
                 String message = inputTextField.getText();
                 String name = inputNameUser.getText();
-                // Добавляем новое сообщение в лог:
-                logTextArea.append(name + ": " + message + "\n");
-                server.addMessageToLog(name + ": " + message + "\n");
+                // Отправляем сообщение в лог сервера, только если сервер запущен:
+                if (server.isServerRunning()) {
+                    server.addMessageToLog(name + ": " + message + "\n");
+                    logTextArea.append(name + ": " + message + "\n");
+                } else {
+                    logTextArea.append("Не удалось отправить сообщение. Сервер не запущен\n");
+                }
+                server.saveLogToFile("log.txt");
                 // Очищаем JTextField после отправки сообщения:
                 inputTextField.setText("");
                 }
@@ -60,5 +66,4 @@ public class User extends JFrame {
             logTextArea.append("Не удалось отправить сообщение. Сервер не запущен\n");
         }
     }
-
 }

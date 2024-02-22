@@ -1,0 +1,79 @@
+                                    Отношения между классами в Java
+
+1. Наследование:
+   - Наследование в Java позволяет создавать новый класс на основе уже существующего класса.
+   - Пример:
+     ```java
+     class Animal {
+        void eat() {
+            System.out.println("Animal is eating");
+        }
+     }
+
+     class Dog extends Animal {
+        void bark() {
+            System.out.println("Dog is barking");
+        }
+     }
+     ```
+
+2. Реализация интерфейса:
+   - Интерфейс в Java описывает набор методов, которые класс должен реализовать.
+   - Пример:
+     ```java
+     interface Printable {
+        void print();
+     }
+
+     class Book implements Printable {
+        public void print() {
+            System.out.println("Book is printable");
+        }
+     }
+     ```
+
+3. Зависимость:
+   - Класс зависит от другого класса, когда он использует его объект или метод.
+   - Пример:
+     ```java
+     class Car {
+        Engine engine = new Engine();
+        void start() {
+            engine.start();
+        }
+     }
+     ```
+
+4. Агрегирование:
+   - Агрегирование представляет собой отношение, при котором один объект содержит в себе другой объект.
+   - Пример:
+     ```java
+     class Car {
+        Engine engine;
+        Car(Engine engine) {
+            this.engine = engine;
+        }
+     }
+     ```
+
+5. Связь:
+   - Описывает как классы взаимодействуют друг с другом.
+   - Пример:
+     ```java
+     class Person {
+        Country country = new Country(); // Связь с объектом Country
+     }
+     ```
+
+6. Направленная связь:
+   - Отношение, которое показывает направление связи между классами.
+   - Пример:
+     ```java
+     class A {
+        B b;
+     }
+
+     class B {
+        // Класс B может иметь ссылку на класс A
+     }
+     ```
