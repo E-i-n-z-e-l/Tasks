@@ -6,5 +6,5 @@ public interface InterfaceEmploy {
     public String getName();
     public double getSalary();
     public void raiseSalary(double byPercent);
-    public void seeSalary(EmployPay[] staff);
+    public String toString();
 }

@@ -1,6 +1,11 @@
 package Theory.A05_PostroyeniyeInterfeysov.F001_ProstoyPrimer;
 
 
+import java.util.Arrays;
+
+/**
+ * Простой пример использования интерфейса.
+ */
 public class Main{
     public static void main(String[] args) {
         EmployPay[] staff = new EmployPay[3];
@@ -20,5 +25,7 @@ public class Main{
         for(EmployPay t : staff) {
             System.out.println("Name: " + t.getName() + " Salary: " + t.getSalary());
         }
+        System.out.println("\n");
+        System.out.println(Arrays.toString(staff));
     }
 }

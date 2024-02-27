@@ -24,9 +24,7 @@ public class EmployPay implements InterfaceEmploy {
         salary += raise;
     }
     @Override
-    public void seeSalary(EmployPay[] staff) {
-        for (EmployPay e : staff) {
-            System.out.println("Name: " + e.getName() + " Salary: " + e.getSalary());
-        }
+    public String toString() {
+            return "Name: " + this.getName() + " Salary: " + this.getSalary();
     }
 }
