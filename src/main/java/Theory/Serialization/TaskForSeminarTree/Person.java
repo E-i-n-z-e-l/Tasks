@@ -2,6 +2,11 @@ package Theory.Serialization.TaskForSeminarTree;
 
 import java.io.*;
 
+/**
+ * Задание 1: Создайте класс Person с полями name и age. Реализуйте сериализацию и десериализацию этого класса в файл.
+ * <p></p>
+ *
+ */
 public class Person implements Serializable {
     private String name;
     private int age;
